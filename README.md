@@ -1,44 +1,78 @@
-# Shopping App Design & Implementation
+![My Image](./assets/TuwaiqAcademy.png)
 
-## Overview
-In this individual project, you will design and implement a shopping app of your choice using Flutter. This project is an opportunity for you to showcase your creativity and apply various Flutter concepts and widgets to create a unique and engaging user experience. You are required to implement at least **five different UIs** and use the following mandatory concepts:
+# Flutter Shopping Application
 
-## Mandatory Requirements
-1. **Drawer Widget**: Create a navigational drawer to manage different sections of your app.
-2. **AlertDialog**: Implement alert dialogs to handle user confirmations or important messages.
-3. **TextFields**: Use TextFields for user input, such as search bars, forms, or login screens.
-4. **Navigation Between Views**: Implement smooth navigation across different views in your app.
-5. **BottomNavigationBar**: Use a BottomNavigationBar to allow users to switch between major sections of your app.
-6. **External Packages**: Utilize at least five external packages to enhance your app's UI.
+This is a stylish and functional-ish~ shopping application built with Flutter. The app incorporates various Flutter widgets and packages to create a modern and responsive user interface. The design is enhanced with animations, shadows, and color schemes selected from [ColorHunt](https://colorhunt.co/).
 
-## Bonus Points
-- **Bottom Sheet**: Implement a bottom sheet to display additional options or information.
-- **TabBarView and TabBar**: Add tabs for organizing content in your app.
-- **PageView**: Create a scrollable view for navigating between pages.
+## Features
 
-## Guidelines
-- This is an **individual project**; each student is expected to work independently.
-- You are encouraged to explore and demonstrate your creativity. Your design and implementation should reflect your unique vision and skills.
+- **Custom Widgets**: The app is modular with custom widgets like `ProductCard` for product display and various other reusable components.
+- **Shimmer Effect**: Placeholder shimmer animations are used to enhance the user experience while data is loading.
+- **Curved Navigation Bar**: A curved navigation bar is implemented for a smoother navigation experience.
+- **Stylized Drawer**: A greenish-themed drawer with FontAwesome icons for easy navigation (no functionalities since you can use bottom bar).
+- **BottomSheet Animation**: A stylish `BottomSheet` with a greenish theme appears when an item is added to the cart.
+- **TabBar & TabBarView**: To switch between different categories like Vegetables, Fruits, Meat, etc.
+- **ScaleTransition**: For animating the appearance of certain widgets like images and texts.
+- **Geolocation**: This app uses the `geolocator` package for geolocation services. The app requests location permissions as soon as it launches, ensuring the necessary permissions are in place for accurate geolocation functionality (for both IOS - Android).
+- **Custom Fonts**: The default font family for the app is set to **Poppins**, providing a clean and modern look across the entire user interface.
 
-## Submission Requirements
-- **Screenshots/Videos**: Include clear screenshots or a short video of your project demonstrating its key features and UI.
-- **Documented README File**: Your project should include a README file that clearly describes:
-  - The purpose and features of your app.
-  - The widgets and external packages used.
-  - Instructions for running the app.
-  - Any additional notes or explanations about your design choices.
+## Packages Used
 
+- **curved_navigation_bar: ^1.0.6**: For the curved navigation bar at the bottom of the app.
+- **flutter_login: ^5.0.0**: Provides a customizable login screen for the app.
+- **font_awesome_flutter: ^10.7.0**: A package for using FontAwesome icons in the app.
+- **geolocator: ^13.0.1**: For fetching the device's location.
+- **google_fonts: ^6.2.1**: To easily use Google Fonts in the app.
+- **shimmer_animation: ^2.2.1**: For creating shimmer effects to indicate loading states.
 
-## Resources
-- **Widgets Documentation & Examples**: [Material Design Components](https://m3.material.io/components/badges/overview)
-- **External UI Packages**: [Flutter Gems](https://fluttergems.dev/)
-- **Color Palettes**: [Color Hunt](https://colorhunt.co/)
-- **Design Inspiration**: Figma Community, Pinterest, Dribbble, Mobbin
+# Here is how it look:
 
-## Deadline
-- **Submission Deadline**: 25 August, 9:59 AM
+## Home Page
 
-## Submission
-Ensure that your project meets all the mandatory requirements. Submit your project files along with a brief documentation describing the features and functionalities you've implemented.
+![Home Gif](./assets/Screenshot/HomePage.gif)
 
-Good luck, and have fun creating your shopping app! 🎨📱
+This home page features a nice shimmer effect that appears while data is loading, providing a smooth visual transition. At the top, it also displays your current location, indicating where the delivery will be made.
+
+## Items Page
+
+![Items Gif](./assets/Screenshot/ItemsPage.gif)
+![Items Gif](./assets/Screenshot/ItemsPage2.gif)
+
+This page features a toolbar for navigating different sections. Additionally, a stylish bottom sheet appears when the "Add to Cart" button is pressed
+
+## Drawer
+
+![Drawer Gif](./assets/Screenshot/Drawer.gif)
+
+This drawer features multiple buttons for various functions, with user information displayed at the top. It is designed to align with the overall green-themed style of the application.
+
+## About Us Page
+
+![About Us Image](./assets/Screenshot/AboutUs.png)
+
+The About Us page is designed in a simple way while using [ColorHunt](https://colorhunt.co/) and does not include interactive functionalities. I utilized `RPSCustomPainter` and the [Flutter Shape Maker](https://fluttershapemaker.com/#/) to convert SVG images into code, enhancing the visual appeal of the page.
+
+## Bottom Navigation Bar
+
+![BottomBar Gif](./assets/Screenshot/BottomBar.gif)
+
+I used the [`curved_navigation_bar`](https://pub.dev/packages/curved_navigation_bar) package to enhance the appearance of the bottom navigation bar. Additionally, I added custom transition animations to make the navigation experience even more visually appealing.
+
+## Registeration Page
+
+![Register Gif](./assets/Screenshot/RegisterPage.gif)
+![Register Gif](./assets/Screenshot/RegisterPage2.gif)
+
+After clicking on the Register text in the Login UI
+This registration UI saves user data in a list of maps and includes a validation check to ensure that the email is not already in use.
+password must be atleast 8 long , and email must include valid input.
+
+## Login Page
+
+![Login Gif](./assets/Screenshot/LoginPage.gif)
+![Login Gif](./assets/Screenshot/LoginPageWrongPassword.gif)
+![Login Gif](./assets/Screenshot/LoginPageSuccess.gif)
+
+The Login page features an animated picture at the top that floats up and down. It also includes input validation to ensure that user credentials are entered correctly.
+
+** Feel free to test the app yourself :) **
